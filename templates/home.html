@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Price Predictor</title>
+</head>
+<body>
+
+    <h1>Mobile Price Predictor</h1>
+    
+    <form method="post" action="/predict">
+        <label>ram</label><br>
+        <input type="text" name="ram"><br><br>
+
+        <label>battery_power</label><br>
+        <input type="text" name="battery_power"><br><br>
+
+        <label>px_width</label><br>
+        <input type="text" name="px_width"><br><br>
+
+        <label>px_height</label><br>
+        <input type="text" name="px_height"><br><br>
+
+        <label>mobile_wt</label><br>
+        <input type="text" name="mobile_wt"><br><br>
+
+        <label>int_memory</label><br>
+        <input type="text" name="int_memory"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+
+</body>
+</html>
