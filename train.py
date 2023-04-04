@@ -1,10 +1,7 @@
 
 import numpy as np
 import pandas as pd
-import json
 import pickle
-import seaborn as sns
-import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay
 from sklearn.preprocessing import OneHotEncoder, StandardScaler 
 from sklearn.model_selection import train_test_split
@@ -13,7 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
-from xgboost import XGBClassifier
+
 
 
 
@@ -37,7 +34,7 @@ X_train = scalar.transform(X_train)
 X_test =  scalar.transform(X_test)
 
 #Building Model 
-clf = XGBClassifier()
+clf = RandomForestClassifier()
 clf.fit(X_train,y_train)
 
 with open("artifacts/model.pkl","wb") as f:
