@@ -34,7 +34,7 @@ X_train = scalar.transform(X_train)
 X_test =  scalar.transform(X_test)
 
 #Building Model 
-clf =DecisionTreeClassifier()
+clf = SVC()
 clf.fit(X_train,y_train)
 
 with open("artifacts/model.pkl","wb") as f:
